@@ -1,0 +1,60 @@
+def PUSH(data):
+    if len(stack)<capacity:
+        stack.append(data)
+        print(data,"is pushed into stack")
+    else:
+        print("stack Overflow")
+        
+        
+def POP():
+    if stack:
+        print(stack[-1],"Popped from stack")
+        stack.POP()
+    else:
+        print("Stack Underflow")
+        
+def PEEK():
+    if stack:
+        print(stack[-1],"is top element of the stack")
+    else:
+        print("Stack is Empty")
+        
+        
+def Display():
+    if stack:
+        print(stack)
+    else:
+        print("stack is Empty")
+
+if __name__=="__main__":
+     stack = []
+     
+     capacity = int(input("Enter Stack capacity:- "))
+     print("\n************WELCOME TO STACK OPERATION*******")
+     print("Enter 1 to PUSH an element into stack")
+     print("Enter 2 to POP an element from stack")
+     print("Enter 3 to PEEK into stack")
+     print("Enter 4 to Display all elements in stack")
+     print("Enter -1 to EXIT\n")
+      
+      
+     while(True):
+          ip = int(input("Enter youir Choice :- "))
+          if ip==1:
+              data = int(input("Enter your Push value :- "))
+              PUSH(data)
+          elif ip==2:
+              POP()
+          elif ip==3:
+              PEEK()
+          elif ip==4:
+              Display()
+          elif ip==-1:
+              print("You have Exited the program")
+              break
+          else:
+              print("Invalid Choice")
+              
+      
+      
+      
